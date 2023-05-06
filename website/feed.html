@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quilsoft-Social</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/feedstyles.css" />
+
+    <!-- BoxIcons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  </head>
+  <body class="body">
+    <header class="header-area">
+      <!-- site-navbar start -->
+      <div class="navbar-area">
+        <div class="container">
+          <nav class="site-navbar" onclick="toggleNav()">
+            <a href="#home" class="site-logo">Quilsoft-Social</a>
+
+            <div class="search-container">
+              <input type="text" class="search-box" placeholder="Buscar..." />
+            </div>
+            <button id="crear-publicacion">Crear publicación</button>
+            <ul id="navbar-menu">
+              <li><a href="#" id="home-button">Inicio</a></li>
+              <li><a href="#" id="saved-button">Guardados</a></li>
+              <li><a href="index.html">Cerrar Sesión</a></li>
+              <li><a href="#"></a></li>
+            </ul>
+
+            <button id="nav-toggler" class="nav-toggler">
+              <span></span>
+            </button>
+              <span></span>
+            </button>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!--Publicar-->
+
+    <section class="publicar" style="display: none">
+      <form class="publicar__formulario">
+        <label class="publicar__label" for="titulo">Título:</label>
+        <input class="publicar__input" type="text" id="titulo" name="titulo" />
+        <label class="publicar__label" for="imagen">Imagen:</label>
+        <input class="publicar__input" type="file" id="imagen" accept="image/*" name="imagen" />
+        <label class="publicar__label" for="descripcion">Descripción:</label>
+        <textarea
+          class="publicar__textarea"
+          id="descripcion"
+          name="descripcion"></textarea>
+        <button class="publicar__boton" type="submit">Publicar</button>
+      </form>
+    </section>
+    <!---------------------Feed------------>
+
+    <section class="feed-section">
+      <div class="new-posts-container"></div> <!-- Nuevo contenedor para los nuevos posts -->
+      <ul class="publicaciones__lista">
+        <li class="publicaciones__item" data-id="1">
+          <div class="publication-content">
+            <h2 class="publication-title">Titulo</h2>
+            <img
+              class="publication-image"
+              src="./img/1.jpg"
+              alt="Descripción de la imagen" />
+            <p class="publication-description">Descripción del post</p>
+          </div>
+          <div class="publication-actions">
+            <button class="like-button"><i class="bx bx-like"></i> Me gusta</button>
+            <button class="share-button"><i class="bx bx-share"></i> Compartir</button>
+          </div>
+        </li>
+        <li class="publicaciones__item" data-id="2">
+          <div class="publication-content">
+            <h2 class="publication-title">Ahora</h2>
+            <img
+              class="publication-image"
+              src="./img/2.jpg"
+              alt="Descripción de la imagen" />
+            <p class="publication-description">Descripción del post</p>
+          </div>
+          <div class="publication-actions">
+            <button class="like-button"><i class="bx bx-like"></i> Me gusta</button>
+            <button class="share-button"><i class="bx bx-share"></i> Compartir</button>
+          </div>
+        </li>
+        <li class="publicaciones__item" data-id="3">
+          <div class="publication-content">
+            <h2 class="publication-title">Prueba</h2>
+            <img
+              class="publication-image"
+              src="./img/3.jpg"
+              alt="Descripción de la imagen" />
+            <p class="publication-description">Descripción del post</p>
+          </div>
+          <div class="publication-actions">
+            <button class="like-button"><i class="bx bx-like"></i> Me gusta</button>
+            <button class="share-button"><i class="bx bx-share"></i> Compartir</button>
+          </div>
+        </li>
+        <!-- Repetir para cada post -->
+      </ul>
+      
+</section>
+    </section>
+
+    <script src="js/feed.js"></script>
+  </body>
+</html>
